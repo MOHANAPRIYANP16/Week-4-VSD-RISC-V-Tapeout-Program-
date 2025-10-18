@@ -1,0 +1,114 @@
+### 2. day2_nfet_idvds_L015_W039.spice
+
+<details> <summary><strong>day2_nfet_idvds_L015_W039.spice </strong></summary>
+
+```
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+
+
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
+
+R1 n1 in 55
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+.dc Vdd 0 1.8 0.1 Vin 0 1.8 0.2
+
+.control
+
+run
+display
+setplot dc1
+.endc
+
+.end
+```
+
+</details>
+
+run this command inside the design of sky130CircuitDesignWorkshop to Simulate transistor I–V characteristics  :
+
+```bash
+   ngspice day2_nfet_idvds_L015_W039.spice
+```
+Then plot the waveforms in ngspice by running :
+
+```bash
+   plot -vdd#branch
+```
+
+
+![alt text](day2_vds.png)
+
+![alt text](day2_vds_model_description.png)
+
+---
+
+### 3. day2_nfet_idvgs_L015_W039.spice
+
+<details> <summary><strong>day2_nfet_idvgs_L015_W039.spice </strong></summary>
+
+```
+*Model Description
+.param temp=27
+
+
+*Including sky130 library files
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+
+*Netlist Description
+
+XM1 Vdd n1 0 0 sky130_fd_pr__nfet_01v8 w=0.39 l=0.15
+
+R1 n1 in 55
+
+Vdd vdd 0 1.8V
+Vin in 0 1.8V
+
+*simulation commands
+
+.op
+.dc Vin 0 1.8 0.1 
+
+.control
+
+run
+display
+setplot dc1
+.endc
+
+.end
+```
+
+</details>
+
+run this command inside the design of sky130CircuitDesignWorkshop to Simulate transistor I–V characteristics  :
+
+```bash
+   ngspice day2_nfet_idvgs_L015_W039.spice
+```
+Then plot the waveforms in ngspice by running :
+
+```bash
+   plot -vdd#branch
+```
+
+![alt text](day2_vgs.png)
+
+![alt text](day2_vgs_model.png)
+
+---
