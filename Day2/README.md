@@ -51,9 +51,9 @@ Then plot the waveforms in ngspice by running :
 ```
 
 
-![alt text](day2_vds.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/day2_vds.png)
 
-![alt text](day2_vds_model_description.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/day2_vds_model_description.png)
 
 ---
 
@@ -107,8 +107,9 @@ Then plot the waveforms in ngspice by running :
    plot -vdd#branch
 ```
 
-![alt text](day2_vgs.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/day2_vgs.png)
 
-![alt text](day2_vgs_model.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/day2_vgs_model.png)
 
 ---
+
