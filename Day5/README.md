@@ -51,9 +51,9 @@ Then plot the waveforms in ngspice by running :
    plot out vs in
 ```
 
-![alt text](day5_deviartion_workflow.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day5/Images/day5_deviartion_workflow.png)
 
-![alt text](day5_devariatent_model.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day5/Images/day5_devariatent_model.png)
 
 
 ### 8. day5_inv_supplyvariation_Wp1_Wn036.spice
@@ -107,5 +107,5 @@ run this command inside the design of sky130CircuitDesignWorkshop to Simulate tr
    ngspice day5_inv_supplyvariation_Wp1_Wn036.spice
 
 ```
-![alt text](Day5_supplyvariation_model.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day5/Images/Day5_supplyvariation_model.png)
 
