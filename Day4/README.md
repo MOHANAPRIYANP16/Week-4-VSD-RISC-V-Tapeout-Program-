@@ -1,3 +1,5 @@
+
+
 ### 6. day4_inv_noisemargin_wp1_wn036.spice
 
 <details> <summary><strong> day4_inv_noisemargin_wp1_wn036.spice </strong></summary>
@@ -50,8 +52,8 @@ Then plot the waveforms in ngspice by running :
 ```bash
    plot out vs in
 ```
-![alt text](day4_workflow.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day4/Images/day4_workflow.png)
 
-![alt text](day4_model.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day4/Images/day4_model.png)
 
 ---
