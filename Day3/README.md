@@ -1,3 +1,6 @@
+
+# CMOS Switching Threshold and Dynamic Simulation
+
 ### 4. day3_inv_tran_Wp084_Wn036.spice
 
 <details> <summary><strong>day2_nfet_idvgs_L015_W039.spice </strong></summary>
@@ -48,9 +51,9 @@ Then plot the waveforms in ngspice by running :
   plot out vs time in
 ```
 
-![alt text](day3_tarn_workflow1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/day3_tarn_workflow1.png)
 
-![alt text](day3_tran_model1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/day3_tran_model1.png)
 
 ### 5. day3_inv_vtc_Wp084_Wn036.spice
 
@@ -105,6 +108,6 @@ Then plot the waveforms in ngspice by running :
  plot out vs in
 ```
 
-![alt text](day3_inv_workflow1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/day3_inv_workflow1.png)
 
-![alt text](day3_inv_model1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/day3_inv_model1.png)
