@@ -204,7 +204,7 @@ then gitclone the this respository for sky130circuit design workshop :
 git clone https://github.com/kunalg123/sky130CircuitDesignWorkshop.git
 ```
 
-![alt text](git_clone_sky130_ngspice.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/git_clone_sky130_ngspice.png)
 
 Then get into that folder what get cloned :
 
@@ -277,6 +277,6 @@ Then plot the waveforms in ngspice by running :
    plot -vdd#branch
 ```
 
-![alt text](ngspice_day1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/ngspice_day1.png)
 
-![alt text](model_description_day1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/model_description_day1.png)
