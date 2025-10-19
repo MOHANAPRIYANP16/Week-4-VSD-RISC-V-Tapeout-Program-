@@ -73,13 +73,21 @@ SPICE acts as a **bridge between theoretical design and real hardware** by enabl
 
 ---
 
+### Voltage Transfer Characteristics (VTC)
+The inverter’s **VTC curve** shows how the output voltage changes with input, highlighting:
+- **Switching threshold (Vm)**
+- **Noise margins**
+- **Transition region**
+
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/spice%20simulation.png)
+
 ## 2. NMOS Transistor Fundamentals
 
 ### 🔸 Structure
 An **NMOS transistor** has four terminals:
 **Gate (G)**, **Drain (D)**, **Source (S)**, and **Body (B)**.
 
-![alt text](image-2.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/NMOS_structure.png)
 
 ---
 
@@ -90,10 +98,6 @@ An **NMOS transistor** has four terminals:
 | VGS > Vt | Channel formed | **ON** |
 
 When ON, an **inversion channel** forms between Source and Drain allowing electron flow.
-
-![alt text](image-3.png)
-
-![alt text](image-4.png)
 
 ---
 
@@ -123,7 +127,7 @@ The **ID–VDS curve** shows how current varies with VDS for different gate volt
 - Linear rise at small VDS (resistive region).  
 - Current saturates after pinch-off point.
 
-![alt text](image-5.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/IDvsVDS.png)
 
 ---
 
@@ -140,6 +144,8 @@ The **ID–VDS curve** shows how current varies with VDS for different gate volt
 - **Visualization:** Channel shortens and current saturates.
 
 ---
+
+
 
 ## 8. Delay Modeling and Analysis
 
@@ -164,7 +170,7 @@ SPICE simulations generate delay values stored in **2D Lookup Tables (LUTs)**.
 - Columns → output loads  
 Each cell (e.g., **CBUF1**, **CBUF2**) uses this table to determine delay under given conditions.
 
-![alt text](image-1.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day1/Images/delay_table.png)
 
 ---
 
