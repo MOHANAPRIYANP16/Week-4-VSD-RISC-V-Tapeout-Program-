@@ -222,7 +222,7 @@ Then simulate the circuit using ngspice tool
 
 ## Labs 
 
-## 11. Basic SPICE Setup
+## Basic SPICE Setup
 - **Purpose:** Simulate and verify circuit behavior before fabrication.  
 - **Simulator Types:**  
   1. Process  
