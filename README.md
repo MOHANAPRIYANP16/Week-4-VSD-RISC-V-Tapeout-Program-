@@ -8,11 +8,11 @@
   
 1. [Objectives](#objectives)  
 2. [Day-wise Folders](#part-wise-folders)
-    - [Day1](https://github.com/santhoshvec24/Week-4-VSD-RISC-V-Tapeout-Program/tree/main/Day1)
-    - [Day2](https://github.com/santhoshvec24/Week-4-VSD-RISC-V-Tapeout-Program/tree/main/Day2)
-    - [Day3](https://github.com/santhoshvec24/Week-4-VSD-RISC-V-Tapeout-Program/tree/main/Day3)
-    - [Day4](https://github.com/santhoshvec24/Week-4-VSD-RISC-V-Tapeout-Program/tree/main/Day4)
-    - [Day5](https://github.com/santhoshvec24/Week-4-VSD-RISC-V-Tapeout-Program/tree/main/Day5)
+    - [Day1](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/tree/main/Day1)
+    - [Day2](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/tree/main/Day2)
+    - [Day3](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/tree/main/Day3)
+    - [Day4](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/tree/main/Day4)
+    - [Day5](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/tree/main/Day5)
 3. [Acknowledgements](#acknowledgements)  
 4. [Contributor](#contributor)
 
