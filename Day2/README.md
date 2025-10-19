@@ -1,6 +1,3 @@
-### 2. day2_nfet_idvds_L015_W039.spice
-
-# Velocity Saturation and basics of CMOS inverter VTC
 
 
 # Velocity Saturation in MOSFETs & CMOS Inverter Voltage Transfer Characteristics (VTC)
@@ -65,7 +62,7 @@ From the graph, two distinct regions can be identified based on the condition \(
 - The drain current (Id) becomes largely **independent of Vds** and is influenced by **channel length modulation**.  
 - Defined for: \( V_{DS} \ge V_{GS} - V_T \).  
 
-![alt text](<Screenshot from 2025-10-19 23-16-33.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/velocity_saturation_effect.png)
 
 
 
@@ -80,7 +77,7 @@ In **short-channel MOSFETs**, at high electric fields:
 1. Low electric field → electron velocity ∝ electric field (linear).  
 2. High electric field → electron velocity saturates due to **scattering effects**.  
 
-![alt text](<Screenshot from 2025-10-19 23-18-00.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/short_channel.png)
 
 **Critical Electric Field (Ec):**  
 Used to determine when velocity saturation starts.
@@ -101,7 +98,7 @@ Used to determine when velocity saturation starts.
 - Short-channel devices saturate earlier, limiting Id.  
 - Long-channel devices follow ideal MOSFET quadratic Id–Vgs behavior.
 
-![alt text](<Screenshot from 2025-10-19 23-19-02.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/long_channel.png)
 
 ---
 
