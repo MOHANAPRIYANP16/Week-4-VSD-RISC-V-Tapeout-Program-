@@ -1,4 +1,33 @@
-### 7. day5_inv_devicevariation_wp7_wn042.spice
+
+# Day 5: Supply Voltage and Device Variation Analysis
+
+## Table of Contents
+
+1. [Overview](#overview)  
+2. [Importance](#importance)  
+3. [Device Variation Simulation](#day5_inv_devicevariation_wp7_wn042spice)  
+4. [Supply Voltage Variation Simulation](#day5_inv_supplyvariation_wp1_wn036spice)  
+5. [Conclusion](#conclusion)
+
+
+## Overview
+
+Study the effect of **supply voltage (VDD)** changes and **transistor sizing (W/L ratios)** on CMOS inverter performance.  
+Focus on how VTC, switching threshold, noise margins, and delays are influenced by variations.
+
+---
+
+## Importance
+
+- Ensures **reliable inverter operation** across voltage and device variations.  
+- Predicts changes in **switching threshold (Vm), noise margins, and propagation delays**.  
+- Improves circuit **robustness** and helps **maximize yield**.  
+- Guides **safe operating margins** for voltage, timing, and current.  
+- Critical for **high-speed and low-power designs** where small variations affect performance.
+
+---
+
+###  day5_inv_devicevariation_wp7_wn042.spice
 
 <details> <summary><strong> day5_inv_devicevariation_wp7_wn042.spice </strong></summary>
 
@@ -56,7 +85,7 @@ Then plot the waveforms in ngspice by running :
 ![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day5/Images/day5_devariatent_model.png)
 
 
-### 8. day5_inv_supplyvariation_Wp1_Wn036.spice
+###  day5_inv_supplyvariation_Wp1_Wn036.spice
 
 <details> <summary><strong> day5_inv_supplyvariation_Wp1_Wn036.spice </strong></summary>
 
@@ -109,3 +138,11 @@ run this command inside the design of sky130CircuitDesignWorkshop to Simulate tr
 ```
 ![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day5/Images/Day5_supplyvariation_model.png)
 
+
+### Conclusion
+
+- CMOS inverter behavior is highly sensitive to supply voltage and device variations.
+
+- Proper sizing and voltage selection allow designers to tune switching threshold, speed, and noise immunity.
+
+- Variation studies are critical for robust digital circuit design under PVT corners, ensuring reliable, high-performance operation.
