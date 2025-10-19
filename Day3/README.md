@@ -1,6 +1,22 @@
 
 # CMOS Switching Threshold and Dynamic Simulation
 
+## Table of Contents
+
+1. [Introduction](#introduction)  
+2. [SPICE Simulation of CMOS Inverter](#spice-simulation-of-cmos-inverter)  
+   - [day3_inv_tran_Wp084_Wn036.spice](#day3_inv_tran_wp084_wn036spice)  
+   - [day3_inv_vtc_Wp084_Wn036.spice](#day3_inv_vtc_wp084_wn036spice)  
+3. [CMOS Inverter – Propagation Delay](#cmos-inverter--propagation-delay)  
+4. [Switching Threshold (Vm)](#switching-threshold-vm)  
+5. [PMOS & NMOS Sizing Insights](#pmos--nmos-sizing-insights)  
+6. [CMOS Inverter Applications](#cmos-inverter-applications)  
+   - [Static Timing Analysis (STA)](#static-timing-analysis-sta)  
+   - [Clock Tree Synthesis (CTS)](#clock-tree-synthesis-cts)  
+7. [Summary](#summary)
+
+---
+
 ## Introduction
 
 The **Voltage-Transfer Characteristic (VTC)** is a plot of output voltage (Vout) versus input voltage (Vin) when Vin is slowly swept from 0 to VDD. It captures the **static switching behavior** of a CMOS inverter:
@@ -222,3 +238,12 @@ Then plot the waveforms in ngspice by running :
 - Regenerates clock signals and introduces intentional skew for balanced timing.  
 - Matched rise/fall delays reduce the need for duty cycle correction; otherwise, correction circuits are used.
 
+
+## Summary
+
+- The **Voltage-Transfer Characteristic (VTC)** shows the static switching behavior of a CMOS inverter.  
+- **Switching threshold (Vm)** occurs when Vin = Vout, critical for speed and noise margins.  
+- **Transient analysis** provides rise/fall delays (tPLH, tPHL) to evaluate inverter performance.  
+- **Transistor sizing (Wp/Lp, Wn/Ln)** influences switching threshold, propagation delay, and noise margins.  
+- Optimal sizing ensures **balanced rise/fall times** for clock and data path inverters.  
+- CMOS inverters are foundational for **STA, CTS**, and robust high-speed digital circuit design.
