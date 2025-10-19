@@ -42,4 +42,4 @@ Grateful acknowledgment is also extended to the SKY130 PDK community, the contri
 
 ---
 
-Previous week, Week 3 (**Static Timing Analysis (STA)**): [Week 3 Repository](https://github.com/MOHANAPRIYANP16/Week-3-VSD-RISC-V-Tapeout-Program)
+Previous week, Week 3 (**Static Timing Analysis (STA)**): [Week 3 Repository](MOHANAPRIYANP16/Week-3-VSD-RISC-V-Tapeout-Program-)
