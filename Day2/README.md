@@ -231,13 +231,13 @@ It is essential for understanding **cell delays** and designing reliable digital
 - **ON State:** The MOSFET behaves like a **closed switch** (finite resistance).  
   - Condition: \( |V_{GS}| > |V_T| \)  
 
-![alt text](<Screenshot from 2025-10-19 23-28-43.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/cmos_device_characteristic.png)
 
 ---
 
 ### Standard MOS Voltage-Current Parameters
 
-![alt text](<Screenshot from 2025-10-19 23-29-49.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/Standard%20MOS%20Voltage-Current%20Parameters.png)
 
 - **Transistor-Level CMOS Inverter:**  
   - PMOS connected to Vdd, NMOS connected to Vss, Vin applied to both gates.  
@@ -259,24 +259,24 @@ To derive **cell delays**, plot the **load curves** for NMOS and PMOS transistor
 - Convert PMOS gate-source voltage (VgsP) to equivalent Vin.  
 - Replace all internal node voltages with Vin, Vdd, Vss, and Vout.  
 
-![alt text](<Screenshot from 2025-10-19 23-30-37.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/Load%20Line%20Analysis%20for%20NMOS%20and%20PMOS.png)
 
 - **PMOS Load Curve:**  
   Shows capacitor charging behavior and Vout transition.  
 
-![alt text](<Screenshot from 2025-10-19 23-31-28.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/PMOS%20Load%20Curve.png)
 
 - **NMOS Load Curve:**  
   Shows capacitor discharging behavior.  
 
-![alt text](<Screenshot from 2025-10-19 23-33-26.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/NMOS%20Load%20Curve.png)
 
 ### Merged PMOS–NMOS Load Curves → VTC
 
 - Combining PMOS and NMOS curves gives the **complete inverter VTC**.  
 - The VTC is used to determine **switching threshold, noise margins, and delay characteristics**.  
 
-![alt text](image.png)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day2/Images/Merged%20PMOS%E2%80%93NMOS%20Load%20Curves%20%E2%86%92%20VTC.png)
 
 ## Summary
 
