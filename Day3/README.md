@@ -34,7 +34,7 @@ To simulate the CMOS inverter:
 2. **Set component values**: Transistor sizes (W/L), supply voltage (VDD), load capacitance (CL).  
 3. **Identify and assign node names**: in, out, VDD, VSS for clarity.  
 
-![alt text](<Screenshot from 2025-10-19 23-43-07.png>)
+![alt text](https://github.com/MOHANAPRIYANP16/Week-4-VSD-RISC-V-Tapeout-Program-/blob/main/Day3/Images/SPICE%20Simulation%20of%20CMOS%20Inverter.png)
 
 ### Labs
 ###  day3_inv_tran_Wp084_Wn036.spice
