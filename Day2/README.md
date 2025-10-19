@@ -6,20 +6,14 @@
 
 ---
 
-## 📘 Table of Contents
-- [Introduction](#introduction)
-- [NMOS Operating Regions](#nmos-operating-regions)
-- [Velocity Saturation Effect](#velocity-saturation-effect)
-- [Long Channel vs Short Channel NMOS](#long-channel-vs-short-channel-nmos)
-- [SPICE Simulation Overview](#spice-simulation-overview)
-- [NMOS I–V Characteristics](#nmos-i–v-characteristics)
-- [CMOS Inverter Basics](#cmos-inverter-basics)
-- [Voltage-Transfer Characteristics (VTC)](#voltage-transfer-characteristics-vtc)
-- [Load Line Analysis](#load-line-analysis)
-- [Key Observations & Insights](#key-observations--insights)
-- [Conclusion](#conclusion)
-- [References](#references)
+## Table of Contents (Short Version)
 
+1. [Introduction](#introduction) – Overview of NMOS/PMOS behavior, VTC, and SPICE simulations.  
+2. [NMOS Operating Regions](#nmos-operating-regions) – Cutoff, Linear, and Saturation regions explained.  
+3. [Velocity Saturation Effect](#velocity-saturation-effect) – Effect of short-channel scaling on Id–Vgs/Id–Vds.  
+4. [Long Channel vs Short Channel NMOS](#long-channel-vs-short-channel-nmos) – Comparison of performance and peak current.  
+5. [SPICE Simulation](#spice-simulation) – Step-by-step transistor I–V simulation using Sky130 PDK.  
+6. [Summary](#summary)
 ---
 
 ## Introduction
@@ -220,3 +214,17 @@ Then plot the waveforms in ngspice by running :
 
 ---
 
+## Summary
+
+This repository demonstrates **NMOS and PMOS transistor behavior** with a focus on short-channel effects and CMOS inverter characteristics.  
+
+Key Points:
+
+- NMOS operates in **Cutoff, Linear, and Saturation regions**, with transition at \( V_{DS} = V_{GS} - V_T \).  
+- **Velocity saturation** in short-channel devices limits drain current and modifies Id–Vgs behavior from quadratic to linear at high gate voltages.  
+- Long-channel devices follow ideal quadratic behavior, while short-channel devices show reduced peak current and early saturation.  
+- CMOS inverters’ **voltage-transfer characteristics (VTC)** explain switching thresholds and delays.  
+- **SPICE simulations** using the Sky130 PDK visualize transistor I–V curves, highlighting the effects of channel length scaling.  
+- Critical electric field (Ec) defines the onset of velocity saturation.  
+
+This study helps understand **channel length scaling, device performance, and inverter delay characteristics** for modern CMOS design.
