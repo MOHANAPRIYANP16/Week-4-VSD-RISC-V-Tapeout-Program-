@@ -13,7 +13,8 @@
 3. [Velocity Saturation Effect](#velocity-saturation-effect) – Effect of short-channel scaling on Id–Vgs/Id–Vds.  
 4. [Long Channel vs Short Channel NMOS](#long-channel-vs-short-channel-nmos) – Comparison of performance and peak current.  
 5. [SPICE Simulation](#spice-simulation) – Step-by-step transistor I–V simulation using Sky130 PDK.  
-6. [Summary](#summary)
+6. [CMOS Voltage-Transfer Characteristics (VTC)](#cmos-voltage-transfer-characteristics-vtc)
+7. [Summary](#summary)
 ---
 
 ## Introduction
@@ -214,17 +215,103 @@ Then plot the waveforms in ngspice by running :
 
 ---
 
+
+## CMOS Voltage-Transfer Characteristics (VTC)
+
+The **Voltage-Transfer Characteristic (VTC)** of a CMOS inverter describes how the output voltage (Vout) changes with respect to the input voltage (Vin).  
+It is essential for understanding **cell delays** and designing reliable digital circuits.
+
+### MOSFET as a Switch
+
+**NMOS:** ON when \( V_{GS} > V_T \), OFF when \( V_{GS} < V_T \)  
+**PMOS:** ON when \( V_{GS} < V_T \), OFF when \( V_{GS} > V_T \)  
+
+- **OFF State:** The MOSFET behaves like an **open switch** (infinite resistance).  
+  - Condition: \( |V_{GS}| < |V_T| \)  
+- **ON State:** The MOSFET behaves like a **closed switch** (finite resistance).  
+  - Condition: \( |V_{GS}| > |V_T| \)  
+
+![alt text](<Screenshot from 2025-10-19 23-28-43.png>)
+
+---
+
+### Standard MOS Voltage-Current Parameters
+
+![alt text](<Screenshot from 2025-10-19 23-29-49.png>)
+
+- **Transistor-Level CMOS Inverter:**  
+  - PMOS connected to Vdd, NMOS connected to Vss, Vin applied to both gates.  
+  - Output (Vout) taken from the common drain node; CL represents load capacitance.  
+
+- **Vin = Vdd (Logic HIGH Input):**  
+  - NMOS ON (acts as Rn), PMOS OFF (open switch) → Vout = 0  
+  - The capacitor discharges through NMOS to Vss.  
+
+- **Vin = 0 (Logic LOW Input):**  
+  - PMOS ON (acts as Rp), NMOS OFF (open switch) → Vout = Vdd  
+  - The capacitor charges through PMOS to Vdd.  
+
+---
+
+### Load Line Analysis for NMOS and PMOS
+
+To derive **cell delays**, plot the **load curves** for NMOS and PMOS transistors:  
+- Convert PMOS gate-source voltage (VgsP) to equivalent Vin.  
+- Replace all internal node voltages with Vin, Vdd, Vss, and Vout.  
+
+![alt text](<Screenshot from 2025-10-19 23-30-37.png>)
+
+- **PMOS Load Curve:**  
+  Shows capacitor charging behavior and Vout transition.  
+
+![alt text](<Screenshot from 2025-10-19 23-31-28.png>)
+
+- **NMOS Load Curve:**  
+  Shows capacitor discharging behavior.  
+
+![alt text](<Screenshot from 2025-10-19 23-33-26.png>)
+
+### Merged PMOS–NMOS Load Curves → VTC
+
+- Combining PMOS and NMOS curves gives the **complete inverter VTC**.  
+- The VTC is used to determine **switching threshold, noise margins, and delay characteristics**.  
+
+![alt text](image.png)
+
 ## Summary
 
-This repository demonstrates **NMOS and PMOS transistor behavior** with a focus on short-channel effects and CMOS inverter characteristics.  
+This repository demonstrates the behavior and characteristics of CMOS inverters and MOSFETs through SPICE simulations and theoretical analysis. Key highlights include:
 
-Key Points:
+1. **NMOS Operating Regions:**
+   - MOSFETs operate in **Cutoff**, **Linear (Resistive)**, and **Saturation** regions.
+   - Linear region: Drain current \( I_D \) increases linearly with \( V_{DS} \).  
+   - Saturation region: \( I_D \) is largely independent of \( V_{DS} \) and affected by channel length modulation.
 
-- NMOS operates in **Cutoff, Linear, and Saturation regions**, with transition at \( V_{DS} = V_{GS} - V_T \).  
-- **Velocity saturation** in short-channel devices limits drain current and modifies Id–Vgs behavior from quadratic to linear at high gate voltages.  
-- Long-channel devices follow ideal quadratic behavior, while short-channel devices show reduced peak current and early saturation.  
-- CMOS inverters’ **voltage-transfer characteristics (VTC)** explain switching thresholds and delays.  
-- **SPICE simulations** using the Sky130 PDK visualize transistor I–V curves, highlighting the effects of channel length scaling.  
-- Critical electric field (Ec) defines the onset of velocity saturation.  
+2. **Velocity Saturation in Short-Channel MOSFETs:**
+   - At high electric fields, electron velocity saturates (\( v_{sat} \)), causing \( I_D \) to grow linearly with \( V_{GS} \) instead of quadratically.
+   - Low electric fields: \( v \propto E \) (linear).  
+   - High electric fields: velocity saturates due to scattering, limiting drain current.
 
-This study helps understand **channel length scaling, device performance, and inverter delay characteristics** for modern CMOS design.
+3. **Long vs Short Channel NMOS:**
+   - Long-channel devices: Quadratic \( I_D–V_{GS} \) behavior, higher peak current.  
+   - Short-channel devices: Early saturation, lower peak current, faster switching, significant short-channel effects (Voltage Saturation, DIBL).
+
+4. **CMOS Voltage-Transfer Characteristics (VTC):**
+   - VTC shows how output voltage (Vout) responds to input voltage (Vin).  
+   - Critical for analyzing **cell delays**, **switching thresholds**, and **noise margins**.
+
+5. **MOSFET as a Switch:**
+   - **NMOS:** ON if \( V_{GS} > V_T \), OFF if \( V_{GS} < V_T \).  
+   - **PMOS:** ON if \( V_{GS} < V_T \), OFF if \( V_{GS} > V_T \).  
+   - OFF state: behaves like an open switch (infinite resistance).  
+   - ON state: behaves like a closed switch (finite resistance).  
+
+6. **Transistor-Level CMOS Inverter Behavior:**
+   - **Vin = Vdd:** NMOS ON, PMOS OFF → Vout = 0 (capacitor discharges through NMOS).  
+   - **Vin = 0:** PMOS ON, NMOS OFF → Vout = Vdd (capacitor charges through PMOS).
+
+7. **Load Line Analysis & VTC Plotting:**
+   - Load curves for NMOS and PMOS determine the inverter’s VTC.
+   - Merging PMOS and NMOS curves produces the **complete VTC**, which is used to evaluate **switching thresholds, noise margins, and cell delays**.
+
+This summary consolidates **theoretical concepts, SPICE simulations, and graphical observations** to provide a comprehensive understanding of CMOS inverter operation and MOSFET behavior.
